@@ -1,0 +1,16 @@
+FROM python:3
+#ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND newt
+ENV PYTHONUNBUFFERED 1
+RUN pip install --upgrade pip
+RUN pip freeze -> requirements.txt
+COPY . .
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get install -y apt-utils
+#RUN apt-get -y update
+RUN apt-get -y install iputils-ping
+RUN apt-get -y install net-tools
+RUN apt-get -y install sudo
+RUN apt-get -y install nano
+CMD ["django-admin", "startproject", "mysite"]
+EXPOSE 8000
