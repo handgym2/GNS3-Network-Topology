@@ -1,0 +1,3 @@
+[submodule "elk-docker"]
+	path = elk-docker
+	url = https://github.com/spujadas/elk-docker
