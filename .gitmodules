@@ -1,3 +1,6 @@
 [submodule "elk-docker"]
 	path = elk-docker
 	url = https://github.com/spujadas/elk-docker
+[submodule "modsecurity-docker"]
+	path = modsecurity-docker
+	url = https://github.com/coreruleset/modsecurity-docker
